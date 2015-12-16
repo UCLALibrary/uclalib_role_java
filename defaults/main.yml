@@ -1,0 +1,7 @@
+---
+# Set java_version to the java package name you'd like to install
+# The package name should match what you find by doing a yum search package_name
+java_package: java-1.8.0-oracle-devel.x86_64
+
+# Set the RHEL subscription-manager repository name to use
+java_reponame: rhel-6-server-thirdparty-oracle-java-rpms
