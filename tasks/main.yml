@@ -8,6 +8,4 @@
   when: repo_result is undefined
 
 - name: Install the Oracle JDK
-  yum: 
-  	name: "{{ java_package }}" 
-  	state: installed
+  yum: name={{ java_package }} state=installed
