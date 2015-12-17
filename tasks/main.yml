@@ -2,7 +2,6 @@
 
 - name: Enable RHEL third party oracle java repository.
   command: /usr/sbin/subscription-manager repos --enable={{ java_reponame }}
-  when: repo_result is undefined
 
 - name: Install the Oracle JDK
   yum: name={{ java_package }} state=installed
