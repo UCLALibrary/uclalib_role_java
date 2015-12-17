@@ -1,7 +1,4 @@
 ---
-- name: Determine if RHEL third party oracle java repository is enabled.
-  shell: /usr/bin/yum repolist | grep {{ java_reponame }} | awk '{ print $1 }'
-  register: repo_result
 
 - name: Enable RHEL third party oracle java repository.
   command: /usr/sbin/subscription-manager repos --enable={{ java_reponame }}
