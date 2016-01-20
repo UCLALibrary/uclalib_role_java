@@ -1,7 +1,13 @@
 ---
 
+- name: Determine if oracle java repository needs to be enabled
+  shell: /usr/sbin/subscription-manager repos --list-enabled | grep Oracle
+  ignore_errors: True
+  register: repo_status
+
 - name: Enable RHEL third party oracle java repository.
   command: /usr/sbin/subscription-manager repos --enable={{ java_reponame }}
+  when: repo_status.stdout is undefined
 
 - name: Install the Oracle JDK
-  yum: name={{ java_package }} state=installed
+  yum: name={{ java_package }} state=latest
