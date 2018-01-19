@@ -3,4 +3,4 @@
 - include: verify.yml
 
 - include: install.yml
-  when: installed_oracle_java_version is defined and installed_oracle_java_version != oracle_java_version
+  when: installed_oracle_java_version is not defined or installed_oracle_java_version != oracle_java_version
