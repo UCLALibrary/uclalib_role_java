@@ -6,7 +6,7 @@
 
 - block:
   - name: Determine version of Oracle Java installed
-    shell: {{ java_home }}/bin/java -version
+    shell: "{{ java_home }}/bin/java -version"
     register: java_version_output
 
   - name: Set installed Oracle Java version fact
