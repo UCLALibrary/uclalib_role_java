@@ -1,7 +1,20 @@
 ---
-# Set java_version to the java package name you'd like to install
-# The package name should match what you find by doing a yum search package_name
-java_package: java-1.8.0-oracle-devel.x86_64
 
-# Set the RHEL subscription-manager repository name to use
-java_reponame: rhel-6-server-thirdparty-oracle-java-rpms
+# The default URL to the Oracle Java package you wish to download/install
+# Obtain this URL from http://www.oracle.com/technetwork/java/javase/downloads/index.html
+# and navigate to the Java version you want to download
+# You'll need to accept the license agreement
+# Then when you hover your mouse arrow over the download link, you'll see the download URL which you can copy/use
+# Example: http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm
+oracle_java_url: ""
+
+# This split statement grabs the rpm filename off the end of the oracle_java_url above
+java_rpm_filename: "{{ oracle_java_url.split('/')[8] }}"
+
+# Example: "java version \"1.8.0_161\""
+oracle_java_version: ""
+
+# Obtain from the checksum page for this version of Oracle Java
+java_rpm_md5: ""
+
+java_home: /usr/java/latest/jre

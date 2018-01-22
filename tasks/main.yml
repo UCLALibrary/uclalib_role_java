@@ -1,18 +1,6 @@
 ---
 
-- name: Determine if oracle java repository needs to be enabled
-  shell: /usr/sbin/subscription-manager repos --list-enabled | grep Oracle
-  register: repo_status
-  failed_when: "repo_status.rc > 1"
-  changed_when: "repo_status.rc == 1"
+- include: verify.yml
 
-- name: Enable RHEL third party oracle java repository, skip when not on RedHat.
-  command: /usr/sbin/subscription-manager repos --enable={{ java_reponame }}
-  when: (repo_status.rc == 1) and
-        (ansible_distribution == "RedHat")
-
-- name: Install the JDK specified by the PlayBook
-  yum: name={{ java_package }} state=latest
-
-- name: Register JAVA_HOME env variable
-  lineinfile: dest=/etc/profile regexp="^(export JAVA_HOME=)" state=present line="export JAVA_HOME=/usr/lib/jvm/java"
+- include: install.yml
+  when: installed_oracle_java_version is not defined or installed_oracle_java_version != oracle_java_version
