@@ -5,7 +5,7 @@
     url: "{{ oracle_java_url }}"
     dest: "/opt/{{ java_rpm_filename }}"
     headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
-    checksum: "sha256:{{ java_rpm_sha256 }}"
+    checksum: "md5:{{ java_rpm_md5 }}"
 
 - name: Install Oracle Java
   yum:

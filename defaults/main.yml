@@ -13,6 +13,6 @@ java_rpm_filename: "{{ oracle_java_url.split('/')[8] }}"
 oracle_java_version: "java version \"1.8.0_161\""
 
 # Obtain from the checksum page for this version of Oracle Java
-java_rpm_sha256: d6808a4a7b96b72e8fbee28a223f94e43a07e970e757b87fc409644716ed7aa0
+java_rpm_md5: f396f618b7c059089240563d2c46b5fc
 
 java_home: /usr/java/latest/jre
