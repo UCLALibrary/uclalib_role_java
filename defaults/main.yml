@@ -5,14 +5,16 @@
 # and navigate to the Java version you want to download
 # You'll need to accept the license agreement
 # Then when you hover your mouse arrow over the download link, you'll see the download URL which you can copy/use
-oracle_java_url: http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm
+# Example: http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm
+oracle_java_url: ""
 
 # This split statement grabs the rpm filename off the end of the oracle_java_url above
 java_rpm_filename: "{{ oracle_java_url.split('/')[8] }}"
 
-oracle_java_version: "java version \"1.8.0_161\""
+# Example: "java version \"1.8.0_161\""
+oracle_java_version: ""
 
 # Obtain from the checksum page for this version of Oracle Java
-java_rpm_md5: f396f618b7c059089240563d2c46b5fc
+java_rpm_md5: ""
 
 java_home: /usr/java/latest/jre
