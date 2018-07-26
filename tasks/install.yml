@@ -1,5 +1,7 @@
 ---
 
+- include_vars: "{{ oracle_java_version }}.yml"
+
 - name: Download the Oracle Java RPM file
   get_url:
     url: "{{ oracle_java_url }}"

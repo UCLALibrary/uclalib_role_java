@@ -1,6 +1,11 @@
 ---
 
-# The default URL to the Oracle Java package you wish to download/install
+# Defines the version of Oracle Java to install
+# You must have a corresponding vars file to match the version specified
+# Example: "1.8.0_161"
+oracle_java_version: ""
+
+# The URL to the Oracle Java package you wish to download/install
 # Obtain this URL from http://www.oracle.com/technetwork/java/javase/downloads/index.html
 # and navigate to the Java version you want to download
 # You'll need to accept the license agreement
@@ -8,13 +13,12 @@
 # Example: http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm
 oracle_java_url: ""
 
-# This split statement grabs the rpm filename off the end of the oracle_java_url above
-java_rpm_filename: "{{ oracle_java_url.split('/')[8] }}"
-
-# Example: "java version \"1.8.0_161\""
-oracle_java_version: ""
-
 # Obtain from the checksum page for this version of Oracle Java
 java_rpm_md5: ""
 
+# This split statement grabs the rpm filename off the end of the oracle_java_url
+java_rpm_filename: "{{ oracle_java_url.split('/')[8] }}"
+
+# Defines the path to the java home directory
+# This determined by the RPM installation
 java_home: /usr/java/latest/jre
