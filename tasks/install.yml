@@ -6,7 +6,8 @@
   get_url:
     url: "{{ oracle_java_url }}"
     dest: "/opt/{{ java_rpm_filename }}"
-    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+    headers:
+      Cookie: "oraclelicense=accept-securebackup-cookie"
     checksum: "md5:{{ java_rpm_md5 }}"
 
 - name: Install Oracle Java
