@@ -1,14 +1,16 @@
 # UCLALib Ansible Role: Java
 
-Installs Oracle Java on server. RPM is obtained directly from Oracle.
+Ansible role to install Oracle Java on server. RPM is obtained directly from Oracle.
 
 ## Requirements
 
-Only supports RHEL-family servers.
+Only supports RHEL/CentOS-family servers.
 
-For each version of Oracle Java you wish to download, ensure there is a corresponding vars file named: `{{ oracle_java_version}}.yml` - for example: `1.8.0_161.yml`
+For each version of Oracle Java you wish to download, ensure there is a corresponding vars file named:
 
-This vars file should contains the variables: `oracle_java_url` and `java_rpm_md5` associated with the version of java you'd like to download/install.
+`{{ oracle_java_version }}.yml` - for example: `1.8.0_161.yml`
+
+This vars file should contain the variables: `oracle_java_url` and `java_rpm_md5` associated with the version of java you'd like to download/install.
 
 ## Variables
 
