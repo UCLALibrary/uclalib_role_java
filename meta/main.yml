@@ -1,13 +1,15 @@
 ---
+
+dependencies: []
+
 galaxy_info:
-  author: Stephen Gurnick
-  description: Ansible playbook to install the JRE/JDK.
-  license: BSD 3-Clause
-  min_ansible_version: 1.2
+  author: Stephen Gurnick - https://github.com/sgurnick
+  description: Download and install Oracle Java
+  company: UCLA Library
+  license: reference LICENSE file
+  min_ansible_version: 2.4
   platforms:
   - name: EL
     versions:
     - 6
-  categories:
-  - system
-dependencies: []
+    - 7
