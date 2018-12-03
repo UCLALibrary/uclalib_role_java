@@ -17,7 +17,7 @@ oracle_java_url: ""
 java_rpm_md5: ""
 
 # This split statement grabs the rpm filename off the end of the oracle_java_url
-java_rpm_filename: "{{ oracle_java_url.split('/')[8] }}"
+java_rpm_filename: ""
 
 # Defines the path to the java home directory
 # This determined by the RPM installation

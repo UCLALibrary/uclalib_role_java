@@ -1,5 +1,7 @@
 ---
 
-oracle_java_url: "http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.rpm"
+oracle_java_url: "{{ 'http://pkgs.library.ucla.edu/oracle-java/jdk-8u191-linux-x64.rpm' if ansible_domain == 'library.ucla.edu' else 'http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.rpm' }}"
+
+java_rpm_filename: "jdk-8u191-linux-x64.rpm"
 
 java_rpm_md5: "fc6f805f93148cb396ca73989d7c9ea5"
