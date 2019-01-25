@@ -1,0 +1,7 @@
+---
+
+oracle_java_url: "{{ 'http://pkgs.library.ucla.edu/oracle-java/jdk-8u201-linux-x64.rpm' if ansible_domain == 'library.ucla.edu' else 'https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.rpm' }}"
+
+java_rpm_filename: "jdk-8u201-linux-x64.rpm"
+
+java_rpm_md5: "c4ecb536002798fa12b644ae9bc70b43"
