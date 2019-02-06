@@ -1,5 +1,13 @@
 ---
 
+# Defines the JVM platform to use
+# Choices are: `oracle` or `openjdk`
+java_platform: "openjdk"
+
+# Defines the verison of OpenJDK Java to install
+# Options are: `1.6.0`, `1.7.0`, `1.8.0`, `11`
+openjdk_java_version: ""
+
 # Defines the version of Oracle Java to install
 # You must have a corresponding vars file to match the version specified
 # Example: "1.8.0_161"
@@ -20,5 +28,5 @@ java_rpm_md5: ""
 java_rpm_filename: ""
 
 # Defines the path to the java home directory
-# This determined by the RPM installation
-java_home: /usr/java/latest/jre
+# This determined by the JVM platform
+java_home: ""

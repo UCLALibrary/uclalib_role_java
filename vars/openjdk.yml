@@ -1,0 +1,7 @@
+---
+
+java_home: "/usr/lib/jvm/java"
+
+openjdk_packages:
+  - "java-{{ openjdk_java_version }}-openjdk"
+  - "java-{{ openjdk_java_version }}-openjdk-devel"

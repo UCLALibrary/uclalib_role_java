@@ -1,0 +1,14 @@
+---
+
+- name: Install OpenJDK Java
+  yum:
+    name: "{{ openjdk_packages }}"
+    disable_excludes: "all"
+    state: present
+
+- name: Put in place JAVA_HOME env variable
+  lineinfile:
+    dest: /etc/profile
+    regexp: "^(export JAVA_HOME=)"
+    state: present
+    line: "export JAVA_HOME={{ java_home }}"

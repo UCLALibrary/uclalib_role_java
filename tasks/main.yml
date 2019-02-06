@@ -1,6 +1,20 @@
 ---
 
-- include_tasks: verify.yml
+- block:
 
-- include_tasks: install.yml
-  when: installed_oracle_java_version is not defined or installed_oracle_java_version != oracle_java_version
+    - include_vars: openjdk.yml
+
+    - include_tasks: openjdk_install.yml
+
+  when: java_platform == "openjdk"
+
+- block:
+
+    - include_vars: oracle.yml
+
+    - include_tasks: oracle_verify.yml
+
+    - include_tasks: oracle_install.yml
+      when: installed_oracle_java_version is not defined or installed_oracle_java_version != oracle_java_version
+
+  when: java_platform == "oracle"
