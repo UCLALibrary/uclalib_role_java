@@ -10,6 +10,11 @@
       Cookie: "oraclelicense=accept-securebackup-cookie"
     checksum: "md5:{{ java_rpm_md5 }}"
 
+- name: Install Oracle RPM GPG Keys
+  rpm_key:
+    key: https://yum.oracle.com/RPM-GPG-KEY-oracle-ol7
+    state: present
+
 - name: Install Oracle Java
   yum:
     name: "/opt/{{ java_rpm_filename }}"
