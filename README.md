@@ -16,7 +16,7 @@ This vars file should contain the variables: `oracle_java_url` and `java_rpm_md5
 
 * `java_platform` - defines the JVM platform to use - options are `openjdk` or `oracle`. (Default is `openjdk`)
 
-* `openjdk_java_version` - defines the openjdk java version to install - options are `1.6.0`, `1.7.0`, `1.8.0`, `11`. (No default)
+* `openjdk_java_version` - defines the openjdk java version to install - options are `1.8.0`, `11`, `17`, `21`. (No default)
 
 * `oracle_java_version` - defines the version of Oracle to be installed - no default is set - must specify in the play - Example: `1.8.0_161`. Also a corresponding vars file must exist with the appropriate `oracle_java_url` and `java_rpm_md5` entries.
 

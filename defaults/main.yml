@@ -5,7 +5,7 @@
 java_platform: "openjdk"
 
 # Defines the verison of OpenJDK Java to install
-# Options are: `1.6.0`, `1.7.0`, `1.8.0`, `11`
+# Options are: `1.8.0`, `11`, `17`, `21`, etc.
 openjdk_java_version: ""
 
 # Defines the version of Oracle Java to install
